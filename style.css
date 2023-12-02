@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+body {
+    background-image: url(sis.png);
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+  text-align:center;
+  font-family:'Roboto';
+  font-weight:800;
+  font-size:32px;
+  padding-top:30vh;
+  height:100vh;
+  max-width: 100%;
+  overflow:hidden;
+  transform: translate3d(0,0,0);
+}
+div .Birthday{
+  font-weight:800;
+  background: linear-gradient( #f8982ad1, #39ff53ee);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.center{
+    text-align: center;
+    margin-top:140px;
+}
+div {
+    font-weight:800;
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+div #color{
+    font-weight:800;
+    background: linear-gradient(#E43397, #5509ee);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+div:first-of-type {    /* For increasing performance 
+                       ID/Class should've been used. 
+                       For a small demo 
+                       it's okaish for now */
+  animation: showup 9s infinite;
+}
+
+div:last-of-type {
+  width:0px;
+  animation: reveal 9s infinite;
+}
+
+div:last-of-type span {
+  margin-left:-355px;
+  animation: slidein 9s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:380px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:380px;}
+}
+
+
+p {
+  font-size:12px;
+  color:white;
+  margin-top:80px;
+}
